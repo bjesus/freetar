@@ -227,6 +227,29 @@ document.querySelectorAll('.favorite').forEach(item => {
       $(elm).css("color", "#ffae00");
     }
     localStorage.setItem("favorites", JSON.stringify(favorites));
-  })
-})
+  });
+});
 
+const change_columns = (add) => {
+  const tabs = document.querySelector(".tab");
+  if (tabs) {
+    tabs.style.columnCount = parseInt(tabs.style.columnCount || 1) + add;
+
+    const down = document.querySelector("#columns_down");
+    if (["", "1"].includes(tabs.style.columnCount)) {
+      down.style.opacity = 0.3;
+      down.style.pointerEvents = "none";
+    } else {
+      down.style.opacity = 1;
+      down.style.pointerEvents = "auto";
+    }
+  }
+};
+
+change_columns(0);
+document
+  .querySelector("#columns_up")
+  ?.addEventListener("click", () => change_columns(1));
+document
+  .querySelector("#columns_down")
+  ?.addEventListener("click", () => change_columns(-1));
