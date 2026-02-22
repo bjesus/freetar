@@ -10,3 +10,4 @@ services:
       - no-new-privileges
     cap_drop:
       - ALL
+    read_only: true
