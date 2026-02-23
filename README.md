@@ -58,16 +58,15 @@ docker compose up -d
 
 
 ### Dev environment
-You need [poetry](https://python-poetry.org/). Then:
+You need [uv](https://docs.astral.sh/uv/getting-started/installation/). Then:
 ```
-poetry install
+uv run freetar/backend.py
 vim freetar/*.py
-poetry run python freetar/backend.py
 Visit localhost:22000 in browser
 
 # static files: freetar/static/*
 # html templates: freetar/templates/*
-poetry run freetar
+uv run freetar
 ```
 
 ## Future work

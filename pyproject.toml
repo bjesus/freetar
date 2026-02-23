@@ -1,11 +1,12 @@
-[tool.poetry]
+[project]
 name = "freetar"
 version = "0.16.0"
 description = ""
-authors = ["kmille <github@androidloves.me>"]
+authors = [{ name = "kmille", email = "github@androidloves.me" }]
 readme = "README.md"
 repository = "https://github.com/kmille/freetar"
 homepage = "https://github.com/kmille/freetar"
+requires-python = ">=3.9"
 
 
 [tool.poetry.dependencies]
