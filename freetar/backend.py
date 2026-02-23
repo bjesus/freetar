@@ -88,7 +88,7 @@ def main():
                 port=port)
     else:
         threads = os.environ.get("THREADS", "4")
-        print(f"Running backend on {host}:{port} with {threads} threads")
+        print(f"Running freetar {get_version()} backend on {host}:{port} with {threads} threads")
         waitress.serve(app, listen=f"{host}:{port}", threads=threads)
 
 
