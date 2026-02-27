@@ -236,12 +236,18 @@ const change_columns = (add) => {
     tabs.style.columnCount = parseInt(tabs.style.columnCount || 1) + add;
 
     const down = document.querySelector("#columns_down");
+    const up = document.querySelector("#columns_up");
     if (["", "1"].includes(tabs.style.columnCount)) {
       down.style.opacity = 0.3;
       down.style.pointerEvents = "none";
+    } else if (["", "4"].includes(tabs.style.columnCount)) {
+      up.style.opacity = 0.3;
+      up.style.pointerEvents = "none";
     } else {
       down.style.opacity = 1;
+      up.style.opacity = 1;
       down.style.pointerEvents = "auto";
+      up.style.pointerEvents = "auto";
     }
   }
 };
