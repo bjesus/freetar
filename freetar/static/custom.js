@@ -75,6 +75,7 @@ function pageScroll() {
 // Sets up the `pageScroll` function to be called in a loop every
 // `scrollTimeout` milliseconds
 function startScrolling() {
+    document.getElementById("scroll_speed").innerHTML = (scrollTimeout / 50 - 10) * -1;
     if (scrollInterval) {
         clearInterval(scrollInterval);
     }
